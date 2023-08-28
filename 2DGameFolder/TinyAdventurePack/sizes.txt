@@ -1,0 +1,5 @@
+image dimensions
+30 width, 25 height, 6 images in 1 row
+
+character bounds
+7 from left, 2 from top, 16 width, 16 height

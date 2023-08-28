@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+
+<World>
+    <Objects>
+        <Object name ="Bush" x="50" y="50" path ="TinyAdventurePack/Other/Bush.png">
+          <Col type="rect" xoff="0" yoff="0" w="60" h="52" />
+        </Object>
+        <Object name ="Bush" x="150" y="350" path ="TinyAdventurePack/Other/Bush.png">
+          <Col type="rect" xoff="0" yoff="0" w="60" h="52" />
+        </Object>
+        <Object name ="Rock" x="250" y="150" path ="TinyAdventurePack/Other/Rock.png">
+          <Col type="oval" xoff="0" yoff="0" w="60" h="60" />
+        </Object>
+        <Object name ="Tree" x="450" y="250" path ="TinyAdventurePack/Other/Tree/Tree.png">
+          <Col type="oval" xoff="60" yoff="152" w="72" h="64" />
+        </Object>
+    </Objects>
+
+    <Enemies>
+      <Enemy name="Skel" x="50" y="350" path="TinyAdventurePack/Skeleton">
+        <AI>
+          <State name ="Idle">
+            <Action type ="Idle"/>
+            <Decision decide="player_in_range" distance="100"
+                    trueState = "Chase" falseState ="Idle"/>
+          </State>
+          <State name ="Chase">
+            <Action type ="Chase" speed="150" />
+            <Decision decide="player_in_range" distance ="120" 
+                    trueState="Chase" falseState="Idle"/>
+          </State>
+          <State name="Death">
+            <Action type="Death"/>
+            <Decision decide="player_in_range" distance="3"
+                    trueState="Death" falseState="Chase"/>
+          </State>
+          
+        </AI>
+      </Enemy>
+      <Enemy name="Skel" x="475" y="150" path="TinyAdventurePack/Skeleton">
+      </Enemy>
+    </Enemies>
+</World>

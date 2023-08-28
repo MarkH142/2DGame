@@ -1,0 +1,13 @@
+
+<UI>
+  <Group>
+    <Image visable="true" x="0" y="0" width="160" height="16"
+           justify="right" vjustify="top" path="TinyAdventurePack/Data/HealthBar0.png">
+      <Anchor x="1" y="0" />
+    </Image>
+    <Image visable="false" x="0" y="0" width="160" height="16"
+           justify="right" vjustify="top" path="TinyAdventurePack/Data/HealthBar.png">
+      <Anchor x="1" y="0" />
+    </Image>
+  </Group>
+</UI>
